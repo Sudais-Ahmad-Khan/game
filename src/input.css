@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@theme{
+    --bg-primary-color : #0a5586;
+}
+.back-name{
+    z-index: -1;
+}
+.back-name::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    left: 90%;
+    bottom: -10px;
+    transform: rotate(25deg);
+    background-color: #09d4bc;
+
+}
+.player-name{
+    z-index: -1;
+}
+.player-name::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 90%;
+    bottom: -10px;
+    transform: rotate(25deg);
+    background-color: #09d4bc;
+}
+.show{
+    animation: show 0.5s ease-out forwards;
+}
+@keyframes show {
+    0%{
+        opacity: 0;
+        transform: rotateY(180deg) scale(1.3);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+}
+@keyframes showup {
+    0%{
+        opacity: 0.5;
+        transform: translate(-100%, -50%) scale(0.7);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0%, -50%) scale(1);
+    }
+}
+.icon{
+    transition: opacity 0.3s ease-out;
+}
+.computer-box{
+    transition: all 0.3s 0.5s ease-out;
+}
+.player-box{
+    transition: all 0.3s 0.5s ease-out;
+}
+.showup {
+    animation: showup 0.3s ease-in-out forwards;
+}
